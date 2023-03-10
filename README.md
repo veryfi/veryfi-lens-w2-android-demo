@@ -1,1 +1,1 @@
-# veryfi-lens-w2-android-demo-
+# veryfi-lens-w2-android-demo
