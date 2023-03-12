@@ -1,1 +1,78 @@
-# veryfi-lens-w2-android-demo
+<img src="https://user-images.githubusercontent.com/30125790/212157461-58bdc714-2f89-44c2-8e4d-d42bee74854e.png#gh-dark-mode-only" width="200">
+<img src="https://user-images.githubusercontent.com/30125790/212157486-bfd08c5d-9337-4b78-be6f-230dc63838ba.png#gh-light-mode-only" width="200">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+# Veryfi Lens
+
+<a href="https://apps.apple.com/co/app/veryfi-lens/id1498300628?l=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" width="180"></a>&nbsp;&nbsp;
+<a href="https://play.google.com/store/apps/details?id=com.veryfi.lensdemo"><img src="https://en.logodownload.org/wp-content/uploads/2019/06/get-it-on-google-play-badge-1.png" width="180"></a>
+
+Veryfi Lens is code (a framework) with UI for your mobile app to give it document capture superpowers in minutes.
+
+Let Veryfi handle the complexities of frame processing, asset preprocessing, edge routing, and machine vision challenges in document capture. We have been at this for a long time and understand the intricate nature of mobile capture. That’s why we built Lens. Veryfi Lens is built by developers for developers; making the whole process of integrating Lens into your app fast and easy with as few lines as possible.
+
+Veryfi Lens is a Framework: a self-contained, reusable chunks of code and resources you can import into you app.
+
+Lens is built in native code and optimized for fast performance, clean user experience and low memory usage.
+
+You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
+
+## Table of content
+1. [Veryfi Lens W2 Android Example](#examples)
+2. [Configuration](#configuration)
+3. [Other platforms](#other_platforms)
+4. [Get in contact with our team](#contact)
+
+## Veryfi Lens W2 Android Example <a name="examples"></a>
+![LensW2Example](w2-demo.gif)
+
+### Other Lens Android Examples
+This is an example of how to use Veryfi Lens W2 in your app, you can find the developer documentation [here](https://hub.veryfi.com/lens/docs/android/).
+You can find more examples, which are the versions of Lens that we currently offer:
+- [Lens for Receipts & Invoices](https://github.com/veryfi/veryfi-lens-receipts-android-demo)
+- [Lens for Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-android-demo)
+- [Lens for Checks](https://github.com/veryfi/veryfi-lens-checks-android-demo)
+- [Lens for Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-android-demo)
+- [Lens for Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-android-demo)
+- [Lens for OCR](https://github.com/veryfi/veryfi-lens-ocr-android-demo)
+- [Lens for W9](https://github.com/veryfi/veryfi-lens-w9-android-demo)
+- [Lens for Headless Receipts](https://github.com/veryfi/veryfi-lens-headless-receipts-android-demo)
+- [Lens for Headless Credit Cards](https://github.com/veryfi/veryfi-lens-headless-credit-cards-android-demo)
+
+### Configuration <a name="configuration"></a>
+- Clone this repository
+- Open the demo with Android Studio
+- Add your Veryfi Artifactory credentials to settings.gradle
+- Replace credentials in `MainActivity.kt` with yours
+```
+const val CLIENT_ID = BuildConfig.CLIENT_ID // replace BuildConfig.CLIENT_ID with your assigned Client Id
+const val AUTH_USERNAME = BuildConfig.USERNAME // replace BuildConfig.USERNAME with your assigned Username
+const val AUTH_APIKEY = BuildConfig.API_KEY // replace BuildConfig.API_KEY with your assigned API Keyx
+const val URL = BuildConfig.URL // replace BuildConfig.URL with your assigned Endpoint URL
+```
+- Run the project
+
+### Other platforms <a name="other_platforms"></a>
+You can find these examples for Lens iOS 
+- [Receipts & Invoices](https://github.com/veryfi/veryfi-lens-receipts-ios-demo)
+- [Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-ios-demo)
+- [Checks](https://github.com/veryfi/veryfi-lens-checks-ios-demo)
+- [Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-ios-demo)
+- [Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-ios-demo)
+- [OCR](https://github.com/veryfi/veryfi-lens-ocr-ios-demo)
+- [W2](https://github.com/veryfi/veryfi-lens-w2-ios-demo)
+- [W9](https://github.com/veryfi/veryfi-lens-w9-ios-demo)
+- [Headless Receipts](https://github.com/veryfi/veryfi-lens-headless-credit-cards-ios-demo)
+
+We also support the following wrappers for hybrid frameworks:
+- [Cordova](https://hub.veryfi.com/lens/docs/cordova/)
+- [React Native](https://hub.veryfi.com/lens/docs/react-native/)
+- [Flutter](https://hub.veryfi.com/lens/docs/flutter/)
+- [Ionic](https://github.com/veryfi/veryfi-lens-ionic-capacitor-demo)
+- [Xamarin](https://hub.veryfi.com/lens/docs/xamarin/)
+
+If you don't have access to our Hub, please contact our sales team, you can find the contact bellow.
+
+### Get in contact with our sales team <a name="contact"></a>
+Contact sales@veryfi.com to learn more about Veryfi's awesome products.
