@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.veryfi.lens.w2.demo"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField 'String', 'CLIENT_ID', "\"${System.getenv("VERYFI_CLIENT_ID")}\""
+        buildConfigField 'String', 'USERNAME', "\"${System.getenv("VERYFI_USERNAME")}\""
+        buildConfigField 'String', 'API_KEY', "\"${System.getenv("VERYFI_API_KEY")}\""
+        buildConfigField 'String', 'URL', "\"${System.getenv("VERYFI_URL")}\""
+    }
+
+    androidResources {
+        noCompress "veryfi"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.veryfi.lens.w2.demo'
+}
+
+dependencies {
+    // noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.github.martin-stone:hsv-alpha-color-picker-android:3.0.1'
+    implementation 'com.github.lriccardo:TimelineView:1.1.2'
+    implementation 'com.github.pvarry:android-json-viewer:v1.1'
+
+    // Veryfi lens
+    implementation 'com.veryfi.lens:veryfi-lens-w2-sdk:1.7.0.4'
+}
