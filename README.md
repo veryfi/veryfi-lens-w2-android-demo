@@ -18,61 +18,69 @@ Lens is built in native code and optimized for fast performance, clean user expe
 
 You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
 
-## Table of content
-1. [Veryfi Lens W2 Android Example](#examples)
-2. [Configuration](#configuration)
-3. [Other platforms](#other_platforms)
-4. [Get in contact with our team](#contact)
 
-## Veryfi Lens W2 Android Example <a name="examples"></a>
+## Table of content
+1. [Veryfi Lens Android Examples](#examples)
+2. [How to add Veryfi Lens to your project](#maven)
+3. [How to run this project](#configuration)
+4. [Other platforms](#other_platforms)
+5. [Get in contact with our team](#contact)
+
+## Veryfi Lens W-2 Android Example <a name="example"></a>
+This is an example of how to use Veryfi Lens W-2 in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/android/).
+
 ![LensW2Example](w2-demo.gif)
 
-### Other Lens Android Examples
-This is an example of how to use Veryfi Lens W2 in your app, you can find the developer documentation [here](https://hub.veryfi.com/lens/docs/android/).
-You can find more examples, which are the versions of Lens that we currently offer:
-- [Lens for Receipts & Invoices](https://github.com/veryfi/veryfi-lens-receipts-android-demo)
-- [Lens for Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-android-demo)
-- [Lens for Checks](https://github.com/veryfi/veryfi-lens-checks-android-demo)
-- [Lens for Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-android-demo)
-- [Lens for Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-android-demo)
-- [Lens for OCR](https://github.com/veryfi/veryfi-lens-ocr-android-demo)
-- [Lens for W9](https://github.com/veryfi/veryfi-lens-w9-android-demo)
-- [Lens for Headless Receipts](https://github.com/veryfi/veryfi-lens-headless-receipts-android-demo)
-- [Lens for Headless Credit Cards](https://github.com/veryfi/veryfi-lens-headless-credit-cards-android-demo)
+## How to add Veryfi Lens W-2 to your project <a name="maven"></a>
 
-### Configuration <a name="configuration"></a>
+Install from our private [Maven](https://nexus.veryfi.com/repository/maven-releases/), a
+package manager for Java.
+
+Add in your project build.gradle file the Veryfi Lens W-2 Android SDK dependency:
+```ruby
+dependencies {
+    implementation 'com.veryfi.lens:veryfi-lens-w2-sdk:1.7.0.4'
+}
+```
+
+## How to run this project <a name="configuration"></a>
 - Clone this repository
 - Open the demo with Android Studio
 - Add your Veryfi Artifactory credentials to settings.gradle
-- Replace credentials in `MainActivity.kt` with yours
+- Replace credentials in `Application.kt` with yours
 ```
-const val CLIENT_ID = BuildConfig.CLIENT_ID // replace BuildConfig.CLIENT_ID with your assigned Client Id
-const val AUTH_USERNAME = BuildConfig.USERNAME // replace BuildConfig.USERNAME with your assigned Username
-const val AUTH_APIKEY = BuildConfig.API_KEY // replace BuildConfig.API_KEY with your assigned API Keyx
-const val URL = BuildConfig.URL // replace BuildConfig.URL with your assigned Endpoint URL
+const val CLIENT_ID = "XXX" // replace XXX with your assigned Client Id
+const val AUTH_USERNAME = "XXX" // replace XXX with your assigned Username
+const val AUTH_APIKEY = "XXX" // replace XXX with your assigned API Keyx
+const val URL = "XXX" // replace XXX with your assigned Endpoint URL
 ```
 - Run the project
 
-### Other platforms <a name="other_platforms"></a>
+## Other Lens Android Examples <a name="examples"></a>
+You can find some example projects, which are the different versions of Lens that we currently offer:
+- [Lens for Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-android-demo)
+- [Lens for Receipts](https://github.com/veryfi/veryfi-lens-receipts-android-demo)
+- [Lens for Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-android-demo)
+- [Lens for Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-android-demo)
+- [Lens for Checks](https://github.com/veryfi/veryfi-lens-checks-android-demo)
+- [Lens for W2](https://github.com/veryfi/veryfi-lens-w2-android-demo)
+- [Lens for W9](https://github.com/veryfi/veryfi-lens-w9-android-demo)
+
+## Other platforms <a name="other_platforms"></a>
 You can find these examples for Lens iOS 
-- [Receipts & Invoices](https://github.com/veryfi/veryfi-lens-receipts-ios-demo)
 - [Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-ios-demo)
-- [Checks](https://github.com/veryfi/veryfi-lens-checks-ios-demo)
+- [Receipts](https://github.com/veryfi/veryfi-lens-receipts-ios-demo)
 - [Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-ios-demo)
 - [Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-ios-demo)
-- [OCR](https://github.com/veryfi/veryfi-lens-ocr-ios-demo)
-- [W2](https://github.com/veryfi/veryfi-lens-w2-ios-demo)
-- [W9](https://github.com/veryfi/veryfi-lens-w9-ios-demo)
-- [Headless Receipts](https://github.com/veryfi/veryfi-lens-headless-credit-cards-ios-demo)
+- [Checks](https://github.com/veryfi/veryfi-lens-checks-ios-demo)
 
 We also support the following wrappers for hybrid frameworks:
 - [Cordova](https://hub.veryfi.com/lens/docs/cordova/)
 - [React Native](https://hub.veryfi.com/lens/docs/react-native/)
 - [Flutter](https://hub.veryfi.com/lens/docs/flutter/)
-- [Ionic](https://github.com/veryfi/veryfi-lens-ionic-capacitor-demo)
 - [Xamarin](https://hub.veryfi.com/lens/docs/xamarin/)
 
 If you don't have access to our Hub, please contact our sales team, you can find the contact bellow.
 
-### Get in contact with our sales team <a name="contact"></a>
+## Get in contact with our sales team <a name="contact"></a>
 Contact sales@veryfi.com to learn more about Veryfi's awesome products.
