@@ -42,6 +42,7 @@ dependencies {
     implementation 'com.veryfi.lens:veryfi-lens-w2-sdk:1.7.0.9'
 }
 ```
+Min SDK Android 6.0 (API level 23)
 
 ## How to run this project <a name="configuration"></a>
 - Clone this repository
