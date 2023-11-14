@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
     private var emailCCIsOn = veryfiLensSettings.emailCCIsOn
     private var emailCCDomain = veryfiLensSettings.emailCCDomain
     private var rotateDocIsOn = veryfiLensSettings.rotateDocIsOn
-    private var shieldProtectionIsOn = veryfiLensSettings.shieldProtectionIsOn
     private var autoDeleteAfterProcessing = veryfiLensSettings.autoDeleteAfterProcessing
     private var boostModeIsOn = veryfiLensSettings.boostModeIsOn
     private var boundingBoxesIsOn = veryfiLensSettings.boundingBoxesIsOn
@@ -136,7 +135,6 @@ class MainActivity : AppCompatActivity() {
             switchEmailCc.isChecked = emailCCIsOn
             txtCcDomain.text = emailCCDomain
             switchRotateDoc.isChecked = rotateDocIsOn
-            switchShieldProtection.isChecked = shieldProtectionIsOn
         }
         with(binding.settingsApiCard) {
             switchAutoDeleteProcessing.isChecked = autoDeleteAfterProcessing
@@ -195,7 +193,6 @@ class MainActivity : AppCompatActivity() {
             switchDictate.onChangeListener { dictateIsOn = it }
             switchEmailCc.onChangeListener { emailCCIsOn = it }
             switchRotateDoc.onChangeListener { rotateDocIsOn = it }
-            switchShieldProtection.onChangeListener { shieldProtectionIsOn = it }
             txtCcDomain.setOnClickListener {
                 showDialogWithTextField(emailCCDomain, 0, txtCcDomain)
             }
@@ -348,7 +345,6 @@ class MainActivity : AppCompatActivity() {
         veryfiLensSettings.emailCCIsOn = emailCCIsOn
         veryfiLensSettings.emailCCDomain = emailCCDomain
         veryfiLensSettings.rotateDocIsOn = rotateDocIsOn
-        veryfiLensSettings.shieldProtectionIsOn = shieldProtectionIsOn
         veryfiLensSettings.autoDeleteAfterProcessing = autoDeleteAfterProcessing
         veryfiLensSettings.boostModeIsOn = boostModeIsOn
         veryfiLensSettings.boundingBoxesIsOn = boundingBoxesIsOn
