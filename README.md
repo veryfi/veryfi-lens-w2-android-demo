@@ -39,7 +39,7 @@ package manager for Java.
 Add in your project build.gradle file the Veryfi Lens W-2 Android SDK dependency:
 ```ruby
 dependencies {
-    implementation 'com.veryfi.lens:veryfi-lens-w2-sdk:1.7.2.11'
+    implementation 'com.veryfi.lens:veryfi-lens-w2-sdk:1.7.2.12'
 }
 ```
 Min SDK Android 6.0 (API level 23)
