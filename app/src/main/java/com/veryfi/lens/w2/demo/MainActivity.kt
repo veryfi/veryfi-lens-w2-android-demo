@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private var confidenceDetailsIsOn = veryfiLensSettings.confidenceDetailsIsOn
     private var parseAddressIsOn = veryfiLensSettings.parseAddressIsOn
     private var externalId = veryfiLensSettings.externalId ?: ""
+    private var ignoreRemoteSettings = true
     private var gpuIsOn = veryfiLensSettings.gpuIsOn
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,6 +146,7 @@ class MainActivity : AppCompatActivity() {
             switchConfidenceDetails.isChecked = confidenceDetailsIsOn
             switchParseAddress.isChecked = parseAddressIsOn
             txtExternalId.text = externalId.ifEmpty { getString(R.string.settings_na_value) }
+            switchIgnoreRemoteSettings.isChecked = ignoreRemoteSettings
         }
     }
 
@@ -208,6 +210,7 @@ class MainActivity : AppCompatActivity() {
             txtExternalId.setOnClickListener {
                 showDialogWithTextField(externalId, 1, txtExternalId)
             }
+            switchIgnoreRemoteSettings.onChangeListener { ignoreRemoteSettings = it }
         }
     }
 
@@ -354,6 +357,7 @@ class MainActivity : AppCompatActivity() {
         veryfiLensSettings.parseAddressIsOn = parseAddressIsOn
         veryfiLensSettings.gpuIsOn = gpuIsOn
         veryfiLensSettings.externalId = externalId
+        veryfiLensSettings.ignoreRemoteSettings = ignoreRemoteSettings
         veryfiLensSettings.documentTypes = arrayListOf(DocumentType.W2)
         veryfiLensSettings.showDocumentTypes = true
 
