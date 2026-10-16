@@ -2,6 +2,7 @@ package com.veryfi.lens.w2.demo.logs
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lriccardo.timelineview.TimelineDecorator
 import com.veryfi.lens.VeryfiLens
@@ -18,8 +19,10 @@ class LogsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         binding = ActivityLogsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        ThemeHelper.applyEdgeToEdgeInsets(binding.root, binding.appBarLayout, binding.timelineRv)
         ThemeHelper.setSecondaryColorToStatusBar(this)
 
         val adapter = LogsAdapter()
