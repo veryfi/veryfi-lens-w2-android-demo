@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Switch
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.imageview.ShapeableImageView
 import com.veryfi.lens.VeryfiLens
@@ -72,8 +73,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        ThemeHelper.applyEdgeToEdgeInsets(binding.root)
 
         ThemeHelper.setBackgroundColorToStatusBar(this)
         initVeryfiSettings()
